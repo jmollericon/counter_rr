@@ -13,6 +13,9 @@ function App() {
   const decrement = () => {
     dispath({ type: 'DEC' });
   };
+  const addBy = () => {
+    dispath( { type: 'ADD', payload: 10 });
+  }
 
   return (
     <div className="App">
@@ -20,8 +23,9 @@ function App() {
         <img src={logo} className="App-logo" alt="logo" />
         <p>Counter: <code>{counter}</code></p>
         <div className="buttons-container">
-          <button className="App-button" onClick={increment}>+</button>
-          <button className="App-button" onClick={decrement}>-</button>
+          <button className="App-button" onClick={increment}>Increment</button>
+          <button className="App-button" onClick={decrement}>Decrement</button>
+          <button className="App-button" onClick={addBy}>Add By 10</button>
         </div>
       </header>
     </div>
